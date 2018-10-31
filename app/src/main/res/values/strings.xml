@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TutorialDemoApp</string>
+    <string name="facebook_app_id">292431221377634</string>
+    <string name="fb_login_protocol_scheme">fb292431221377634</string>
+
+    <string name="key_hash">xrtVePc5uLO9k5WQIyfy2DY5jEY=</string>
+
+    <string name="sample_token">EAAEJ9vMSSmIBAEh1ZBCuEbwKyik4ifGFWhoQEtyZAgMoZCBZBJGf6uVyGOSwcLLOzoqC2fZCXo9ftFH7Rq9oIwPrBCpf9MqTI6z5aeQ8foE6xFPRTzu9dys8sQ2CLlaBQZBwZAJT0HjBemUFHFqghfEQ31vbva0cgQJN4whRGZCUwxexDiNwbDQvHrXPJh2jcZAtXRoeF6ZAQeNQZDZD</string>
+
+</resources>

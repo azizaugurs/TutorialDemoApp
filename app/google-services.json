@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "840850265353",
+    "firebase_url": "https://tutorial-demo-d2b59.firebaseio.com",
+    "project_id": "tutorial-demo-d2b59",
+    "storage_bucket": "tutorial-demo-d2b59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840850265353:android:b1cc27cbbe530e2c",
+        "android_client_info": {
+          "package_name": "com.example.shanu.tutorialdemoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840850265353-vkqrtluktc3juud9haib5k2c68k9gr4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARqO8jlozRjDNhloJez7rtW_bqEKWjDH4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

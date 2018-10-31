@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onSimpleHttpRequestClick"
+        android:fontFamily="monospace"
+        android:background="@android:color/holo_purple"
+        android:text="Simple HTTP Request to parse JSON" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onRetrofitRequest"
+        android:fontFamily="monospace"
+        android:background="@android:color/holo_red_dark"
+        android:text="Retrofit2 Request" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onGithubRequest"
+        android:fontFamily="monospace"
+        android:background="@android:color/holo_green_light"
+        android:text="Retrofit Github Request" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onRoomDatabaseClick"
+        android:fontFamily="monospace"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Room Database" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onSoundRecordClick"
+        android:fontFamily="monospace"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Record Sound" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onRetrofitLogin"
+        android:fontFamily="monospace"
+        android:background="@android:color/darker_gray"
+        android:text="Retrofit login/reg/img" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:onClick="onRetrofitRegisterOnly"
+        android:fontFamily="monospace"
+        android:background="@android:color/holo_blue_light"
+        android:text="Retrofit Register only" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/facebook_login"
+        android:text="Facebook Login"
+        android:onClick="onFacebookLogin"
+        />
+
+</LinearLayout>
