@@ -24,7 +24,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
@@ -35,6 +38,8 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
      MediaRecorder mediaRecorder;
      String TAG = MainActivity.class.getName();
+     String UID_XIAOMI = "dgWoyov449WuSClnosrg6ZnksxR2";
+     String UID_EMULATOR = "pwQGX9bsyXN0uerPCUqBkXs2fm82";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +55,20 @@ public class MainActivity extends AppCompatActivity {
         FirebaseInstanceId.getInstance().getInstanceId()
                // .add
                 .addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
+
                     @Override
                     public void onSuccess(InstanceIdResult instanceIdResult) {
                         String token = instanceIdResult.getToken();
 
+                        Map<String,String> map =new HashMap<>();
+                        map.put("token", token);
+
                         if(getUid()!=null){
+
                             FirebaseDatabase.getInstance().getReference("tokens")
                                     .child(getUid())
-                                    .setValue(new HashMap<>().put("token", token))
+                                    //.push()
+                                    .setValue(map)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
@@ -66,7 +77,15 @@ public class MainActivity extends AppCompatActivity {
                                     });
                         }
                     }
-                });
+                })
+            .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                @Override
+                public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                    if(!task.isSuccessful())
+                    Log.d(TAG, "onComplete: "+task.getException());
+                }
+            })
+        ;
 
     }
 
@@ -74,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void insertRandomNotifications(){
 
-        Map<String, String> map = new HashMap<>();
+       final Map<String, String> map = new HashMap<>();
 
         if(FirebaseAuth.getInstance().getCurrentUser() == null)
         {
@@ -82,18 +101,41 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        map.put("from",getUid() );
-        map.put("message", "Test message at "+System.currentTimeMillis());
-        FirebaseDatabase.getInstance()
-                .getReference("notification")
-                .push()
-                .setValue(map)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
+       final String targetUID = getUid().equalsIgnoreCase(UID_EMULATOR)?UID_XIAOMI:UID_EMULATOR;
+
+        FirebaseDatabase.getInstance().getReference("tokens").child(targetUID)
+                .child("token")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "onSuccess: ");
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        if(!dataSnapshot.exists())
+                            return;
+
+                        String token = dataSnapshot.getValue(String.class);
+
+                        map.put("from",getUid() );
+                        map.put("message", "Test message at "+System.currentTimeMillis());
+                        map.put("token", token);
+                        map.put("to", targetUID );
+                        FirebaseDatabase.getInstance()
+                                .getReference("notification")
+                                .push()
+                                .setValue(map)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "onSuccess: ");
+                                    }
+                                });
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
                     }
                 });
+
     }
 
 
