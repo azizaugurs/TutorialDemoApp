@@ -72,7 +72,8 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity android:name=".FirebaseNotification.FirebaseNotificationDisplayActivity"></activity>
+        <activity android:name=".FirebaseNotification.FirebaseNotificationDisplayActivity" />
+        <activity android:name=".ViewModelExample.ViewModelDemoActivity"></activity>
     </application>
 
 </manifest>

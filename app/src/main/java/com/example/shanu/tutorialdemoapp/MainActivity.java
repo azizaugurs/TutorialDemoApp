@@ -19,6 +19,7 @@ import com.example.shanu.tutorialdemoapp.RestApi.RetrofitRegistrationActivity;
 import com.example.shanu.tutorialdemoapp.RestApi.RetrofitRequestActivity;
 import com.example.shanu.tutorialdemoapp.RestApi.SimpleHTTPRequestActivity;
 import com.example.shanu.tutorialdemoapp.RoomDatabase.RoomDatabaseActivity;
+import com.example.shanu.tutorialdemoapp.ViewModelExample.ViewModelDemoActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -236,5 +237,9 @@ public class MainActivity extends AppCompatActivity {
             return null;
 
         return FirebaseAuth.getInstance().getCurrentUser().getUid();
+    }
+
+    public void onClickViewModelExample(View view) {
+        startActivity(new Intent(this, ViewModelDemoActivity.class));
     }
 }

@@ -117,5 +117,12 @@
             android:text="Insert Random notification"
             android:onClick="onRandomNodeInsertion" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Model Example"
+            android:onClick="onClickViewModelExample"
+            />
+
     </LinearLayout>
 </ScrollView>
