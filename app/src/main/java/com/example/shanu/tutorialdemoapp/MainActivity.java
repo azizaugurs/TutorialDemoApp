@@ -6,6 +6,8 @@ import android.media.MediaRecorder;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.shanu.tutorialdemoapp.ElementTransition.ElementTransitionActivity;
 import com.example.shanu.tutorialdemoapp.FacebookLogin.FacebookLoginActivity;
 import com.example.shanu.tutorialdemoapp.RestApi.RetrofitGithubRequestActivity;
 import com.example.shanu.tutorialdemoapp.RestApi.RetrofitRegistrationActivity;
@@ -241,5 +244,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickViewModelExample(View view) {
         startActivity(new Intent(this, ViewModelDemoActivity.class));
+    }
+
+    public void onSharedTransitionExampleClick(View view) {
+
+        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this,
+                view,
+                "transition");
+
+        ActivityCompat.startActivity(this, new Intent(this,ElementTransitionActivity.class),
+                optionsCompat.toBundle());
     }
 }

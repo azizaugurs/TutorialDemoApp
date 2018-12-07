@@ -5,6 +5,23 @@
 
     <string name="key_hash">xrtVePc5uLO9k5WQIyfy2DY5jEY=</string>
 
+    <array name="list_items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+        <item>Item 8</item>
+        <item>Item 9</item>
+        <item>Item 10</item>
+        <item>Item 12</item>
+        <item>Item 13</item>
+        <item>Item 14</item>
+
+    </array>
+
     <string name="sample_token">EAAEJ9vMSSmIBAEh1ZBCuEbwKyik4ifGFWhoQEtyZAgMoZCBZBJGf6uVyGOSwcLLOzoqC2fZCXo9ftFH7Rq9oIwPrBCpf9MqTI6z5aeQ8foE6xFPRTzu9dys8sQ2CLlaBQZBwZAJT0HjBemUFHFqghfEQ31vbva0cgQJN4whRGZCUwxexDiNwbDQvHrXPJh2jcZAtXRoeF6ZAQeNQZDZD</string>
 
 </resources>

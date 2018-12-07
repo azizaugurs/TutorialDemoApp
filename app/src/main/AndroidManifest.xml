@@ -73,7 +73,8 @@
             android:resource="@color/colorAccent" />
 
         <activity android:name=".FirebaseNotification.FirebaseNotificationDisplayActivity" />
-        <activity android:name=".ViewModelExample.ViewModelDemoActivity"></activity>
+        <activity android:name=".ViewModelExample.ViewModelDemoActivity" />
+        <activity android:name=".ElementTransition.ElementTransitionActivity"></activity>
     </application>
 
 </manifest>

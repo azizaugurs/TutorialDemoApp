@@ -12,12 +12,12 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="20dp"
+        android:padding="0dp"
         tools:context=".MainActivity">
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -28,7 +28,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -39,7 +39,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -51,7 +51,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -63,7 +63,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -74,7 +74,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -85,7 +85,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -97,14 +97,14 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:id="@+id/facebook_login"
             android:text="Facebook Login"
             android:onClick="onFacebookLogin" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text="Login Anonymous"
             android:onClick="showLoginDialog" />
 
@@ -112,16 +112,23 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
 
             android:text="Insert Random notification"
             android:onClick="onRandomNodeInsertion" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:text="View Model Example"
             android:onClick="onClickViewModelExample"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Shared Transition Example"
+            android:onClick="onSharedTransitionExampleClick"
             />
 
     </LinearLayout>
