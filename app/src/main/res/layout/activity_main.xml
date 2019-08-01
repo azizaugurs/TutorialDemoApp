@@ -15,6 +15,19 @@
         android:padding="0dp"
         tools:context=".MainActivity">
 
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:onClick="onOAuth2Click"
+            android:fontFamily="monospace"
+            android:background="@android:color/darker_gray"
+            android:text="OAuth2 demo" />
+
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -129,6 +142,14 @@
             android:layout_height="80dp"
             android:text="Shared Transition Example"
             android:onClick="onSharedTransitionExampleClick"
+            />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Video View Example"
+            android:onClick="onVideoViewClick"
             />
 
     </LinearLayout>

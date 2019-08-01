@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.example.shanu.tutorialdemoapp.ElementTransition.ElementTransitionActivity;
 import com.example.shanu.tutorialdemoapp.FacebookLogin.FacebookLoginActivity;
@@ -22,7 +23,9 @@ import com.example.shanu.tutorialdemoapp.RestApi.RetrofitRegistrationActivity;
 import com.example.shanu.tutorialdemoapp.RestApi.RetrofitRequestActivity;
 import com.example.shanu.tutorialdemoapp.RestApi.SimpleHTTPRequestActivity;
 import com.example.shanu.tutorialdemoapp.RoomDatabase.RoomDatabaseActivity;
+import com.example.shanu.tutorialdemoapp.VideoView.VideoViewActivity;
 import com.example.shanu.tutorialdemoapp.ViewModelExample.ViewModelDemoActivity;
+import com.example.shanu.tutorialdemoapp.oauth2.OAuth2ApiActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -144,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     public void onSimpleHttpRequestClick(View view) {
         startActivity(new Intent(this, SimpleHTTPRequestActivity.class));
     }
@@ -254,5 +259,13 @@ public class MainActivity extends AppCompatActivity {
 
         ActivityCompat.startActivity(this, new Intent(this,ElementTransitionActivity.class),
                 optionsCompat.toBundle());
+    }
+
+    public void onOAuth2Click(View view) {
+        startActivity(new Intent(this, OAuth2ApiActivity.class));
+    }
+
+    public void  onVideoViewClick(View view){
+        startActivity(new Intent(this, VideoViewActivity.class));
     }
 }
