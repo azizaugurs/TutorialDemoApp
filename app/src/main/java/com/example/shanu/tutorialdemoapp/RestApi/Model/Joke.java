@@ -13,6 +13,26 @@ public class Joke implements Parcelable , Serializable {
     private String setup;
     private String punchline;
 
+    protected Joke(Parcel in) {
+        id = in.readInt();
+        type = in.readString();
+        general = in.readString();
+        setup = in.readString();
+        punchline = in.readString();
+    }
+
+    public static final Creator<Joke> CREATOR = new Creator<Joke>() {
+        @Override
+        public Joke createFromParcel(Parcel in) {
+            return new Joke(in);
+        }
+
+        @Override
+        public Joke[] newArray(int size) {
+            return new Joke[size];
+        }
+    };
+
     public int getId() {
         return id;
     }
@@ -60,6 +80,10 @@ public class Joke implements Parcelable , Serializable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-
+        parcel.writeInt(id);
+        parcel.writeString(type);
+        parcel.writeString(general);
+        parcel.writeString(setup);
+        parcel.writeString(punchline);
     }
 }

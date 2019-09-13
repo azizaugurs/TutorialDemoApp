@@ -1,20 +1,15 @@
 
 package com.example.shanu.tutorialdemoapp.ViewModelExample;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -39,17 +34,14 @@ public class ViewModelDemoActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.listView);
 
         dataModel.getLiveData()
-                .observe(this, new Observer<List<String>>() {
-                    @Override
-                    public void onChanged(@Nullable List<String> strings) {
+                .observe(this, strings -> {
 
-                        Log.d(TAG, "onChanged: "+strings);
+                    Log.d(TAG, "onChanged: "+strings);
 
-                        ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1,
-                                strings);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1,
+                            strings);
 
-                        listView.setAdapter(adapter);
-                    }
+                    listView.setAdapter(adapter);
                 });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

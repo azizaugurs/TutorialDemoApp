@@ -1,7 +1,7 @@
 package com.example.shanu.tutorialdemoapp.VideoView
 
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.shanu.tutorialdemoapp.R

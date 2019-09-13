@@ -1,16 +1,12 @@
 package com.example.shanu.tutorialdemoapp.oauth2;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.shanu.tutorialdemoapp.R;
 
-import java.io.IOException;
-
 import ca.mimic.oauth2library.OAuth2Client;
-import ca.mimic.oauth2library.OAuthResponse;
-import ca.mimic.oauth2library.OAuthResponseCallback;
 
 public class OAuth2ApiActivity extends AppCompatActivity {
 

@@ -6,8 +6,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -220,7 +220,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
         AuthCredential  authCredential = FacebookAuthProvider.getCredential(accessToken.getToken());
 
 
-            Log.d(TAG, String.valueOf("handleFacebook: authcred = "+authCredential.getSignInMethod()));
+            Log.d(TAG, "handleFacebook: authcred = " + authCredential.getSignInMethod());
 
 
 

@@ -1,17 +1,13 @@
 package com.example.shanu.tutorialdemoapp.WebView;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 
 import com.example.shanu.tutorialdemoapp.R;
 import com.example.shanu.tutorialdemoapp.ViewModelExample.DataModel;
-
-import java.util.List;
 
 public class WebViewActivity extends AppCompatActivity {
 

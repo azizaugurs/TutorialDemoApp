@@ -1,20 +1,18 @@
 package com.example.shanu.tutorialdemoapp;
 
-import android.arch.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.VideoView;
 
 import com.example.shanu.tutorialdemoapp.ElementTransition.ElementTransitionActivity;
 import com.example.shanu.tutorialdemoapp.FacebookLogin.FacebookLoginActivity;

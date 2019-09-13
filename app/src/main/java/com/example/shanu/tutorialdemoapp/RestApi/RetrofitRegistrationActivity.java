@@ -1,6 +1,6 @@
 package com.example.shanu.tutorialdemoapp.RestApi;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,8 +9,6 @@ import android.widget.Toast;
 
 import com.example.shanu.tutorialdemoapp.R;
 import com.example.shanu.tutorialdemoapp.RestApi.Interfaces.RetrofitClientAPI;
-import com.example.shanu.tutorialdemoapp.RestApi.Model.RegistrationResponse;
-import com.example.shanu.tutorialdemoapp.RetrofitLoginRegistrationActivity;
 
 import java.io.IOException;
 

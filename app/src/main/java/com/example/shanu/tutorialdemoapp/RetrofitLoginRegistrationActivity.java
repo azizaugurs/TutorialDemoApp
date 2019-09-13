@@ -7,8 +7,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.content.CursorLoader;
-import android.support.v7.app.AppCompatActivity;
+import androidx.loader.content.CursorLoader;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -16,14 +16,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.shanu.tutorialdemoapp.RestApi.Interfaces.RetrofitClientAPI;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import cz.msebera.android.httpclient.Header;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

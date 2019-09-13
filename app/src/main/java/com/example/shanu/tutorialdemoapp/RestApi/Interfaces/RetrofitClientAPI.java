@@ -3,9 +3,6 @@ package com.example.shanu.tutorialdemoapp.RestApi.Interfaces;
 import com.example.shanu.tutorialdemoapp.RestApi.Model.Github;
 import com.example.shanu.tutorialdemoapp.RestApi.Model.Image;
 import com.example.shanu.tutorialdemoapp.RestApi.Model.Joke;
-import com.example.shanu.tutorialdemoapp.RestApi.Model.RegistrationResponse;
-import com.example.shanu.tutorialdemoapp.RestApi.Model.SignatureResponse;
-import com.google.gson.JsonElement;
 
 import java.util.List;
 

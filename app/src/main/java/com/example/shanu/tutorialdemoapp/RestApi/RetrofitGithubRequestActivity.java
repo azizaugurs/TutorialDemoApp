@@ -2,16 +2,14 @@ package com.example.shanu.tutorialdemoapp.RestApi;
 
 import android.app.ProgressDialog;
 import android.graphics.Color;
-import android.media.MediaRecorder;
-import android.os.Environment;
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
@@ -23,7 +21,6 @@ import android.widget.Toast;
 import com.example.shanu.tutorialdemoapp.R;
 import com.example.shanu.tutorialdemoapp.RestApi.Interfaces.RetrofitClientAPI;
 import com.example.shanu.tutorialdemoapp.RestApi.Model.Github;
-import com.google.gson.JsonElement;
 
 import java.util.List;
 
