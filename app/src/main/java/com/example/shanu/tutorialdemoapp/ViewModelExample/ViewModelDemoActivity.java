@@ -1,12 +1,7 @@
 
 package com.example.shanu.tutorialdemoapp.ViewModelExample;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,10 +9,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
+
 import com.example.shanu.tutorialdemoapp.R;
 import com.example.shanu.tutorialdemoapp.WebView.WebViewActivity;
-
-import java.util.List;
 
 public class ViewModelDemoActivity extends AppCompatActivity {
     String TAG = "ViewModel";

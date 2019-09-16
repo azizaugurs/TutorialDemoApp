@@ -33,26 +33,6 @@ public class DataModel extends ViewModel {
 
 
     private void loadData(){
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                List<String> list = new ArrayList<>();
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//                list.add("User - "+System.currentTimeMillis());
-//
-//                userMutableLiveData.setValue(list);
-//
-//            }
-//        }, 5000);
 
 
         FirebaseDatabase.getInstance().getReference()
